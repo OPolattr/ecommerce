@@ -23,3 +23,6 @@ C:\Users\Omer\Desktop\ecommerce\Store\StoreApp\obj\Debug\net6.0\refint\StoreApp.
 C:\Users\Omer\Desktop\ecommerce\Store\StoreApp\obj\Debug\net6.0\StoreApp.pdb
 C:\Users\Omer\Desktop\ecommerce\Store\StoreApp\obj\Debug\net6.0\StoreApp.genruntimeconfig.cache
 C:\Users\Omer\Desktop\ecommerce\Store\StoreApp\obj\Debug\net6.0\ref\StoreApp.dll
+C:\Users\Omer\Desktop\ecommerce\Store\StoreApp\obj\Debug\net6.0\StoreApp.sourcelink.json
+C:\Users\Omer\Desktop\ecommerce\Store\StoreApp\obj\Debug\net6.0\StoreApp.RazorAssemblyInfo.cache
+C:\Users\Omer\Desktop\ecommerce\Store\StoreApp\obj\Debug\net6.0\StoreApp.RazorAssemblyInfo.cs

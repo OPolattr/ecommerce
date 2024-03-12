@@ -1,9 +1,14 @@
 //web uygulamasının insa edilmesi
 var builder = WebApplication.CreateBuilder(args);
+//servis kaydi
+builder.Services.AddControllersWithViews();
+
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
-app.MapGet("/btk", () => "BTK Akademi!");
+app.UseHttpsRedirection();
+app.UseRouting();
+
+app.MapControllerRoute("default","{controller=home}/{action=index}/{id?}");
 
 app.Run();
 
