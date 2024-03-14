@@ -1,17 +1,19 @@
-@model StoreApp.Models.Product
+@{
+    //default sayfa gelmez
+    Layout = null;
+}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-        <div>
-            <h3>@Model.ProductName</h3>
-            <p>@Model.ProductPrice</p>
-            <a href="/Product">Products</a>
-        </div>
-</body>
-</html>
+@model Product
+
+@section Top{
+    <div>
+        Only for Get Header
+    </div>
+}
+
+<div>
+    <h3>@Model.ProductName</h3>
+    <p>@Model.ProductPrice</p>
+    <a href="/Product">Products</a>
+    
+</div>
