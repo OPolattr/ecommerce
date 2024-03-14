@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Omer\\Desktop\\ecommerce\\Store\\StoreApp\\StoreApp.csproj": {}
+    "C:\\Users\\Omer\\Desktop\\ecommerce\\Store\\StoreApp\\StoreApp.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Omer\\Desktop\\ecommerce\\Store\\StoreApp\\StoreApp.csproj": {
+    "C:\\Users\\Omer\\Desktop\\ecommerce\\Store\\StoreApp\\StoreApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Omer\\Desktop\\ecommerce\\Store\\StoreApp\\StoreApp.csproj",
+        "projectUniqueName": "C:\\Users\\Omer\\Desktop\\ecommerce\\Store\\StoreApp\\StoreApp.csproj",
         "projectName": "StoreApp",
-        "projectPath": "c:\\Users\\Omer\\Desktop\\ecommerce\\Store\\StoreApp\\StoreApp.csproj",
+        "projectPath": "C:\\Users\\Omer\\Desktop\\ecommerce\\Store\\StoreApp\\StoreApp.csproj",
         "packagesPath": "C:\\Users\\Omer\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Omer\\Desktop\\ecommerce\\Store\\StoreApp\\obj\\",
+        "outputPath": "C:\\Users\\Omer\\Desktop\\ecommerce\\Store\\StoreApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

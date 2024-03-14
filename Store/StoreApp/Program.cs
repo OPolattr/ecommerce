@@ -5,6 +5,7 @@ using StoreApp.Models;
 var builder = WebApplication.CreateBuilder(args);
 //servis kaydi
 builder.Services.AddControllersWithViews();
+//ProductController dosyası icin onemli
 builder.Services.AddDbContext<RepositoryContext>(options =>
 {
     options.UseSqlite(builder.Configuration.GetConnectionString("sqlconnection"));
