@@ -1,22 +1,51 @@
-//web uygulamasının insa edilmesi
-using Microsoft.EntityFrameworkCore;
-using StoreApp.Models;
+using StoreApp.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
-//servis kaydi
+
+builder.Services.AddControllers()
+    .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
 builder.Services.AddControllersWithViews();
-//ProductController dosyası icin onemli
-builder.Services.AddDbContext<RepositoryContext>(options =>
-{
-    options.UseSqlite(builder.Configuration.GetConnectionString("sqlconnection"));
-});
+builder.Services.AddRazorPages();
+
+builder.Services.ConfigureDbContext(builder.Configuration);
+builder.Services.ConfigureIdentity();
+builder.Services.ConfigureSession();
+builder.Services.ConfigureRepositoryRegistration();
+builder.Services.ConfigureServiceRegistration();
+builder.Services.ConfigureRouting();
+builder.Services.ConfigureApplicationCookie();
+
+builder.Services.AddAutoMapper(typeof(Program));
+
+
 var app = builder.Build();
 
+app.UseStaticFiles();
+app.UseSession();
 app.UseHttpsRedirection();
 app.UseRouting();
 
-app.MapControllerRoute("default","{controller=home}/{action=index}/{id?}");
+app.UseAuthentication();
+app.UseAuthorization();
 
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapAreaControllerRoute(
+        name: "Admin",
+        areaName: "Admin",
+        pattern: "Admin/{controller=Dashboard}/{action=Index}/{id?}"
+    );
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}"
+    );
+
+    endpoints.MapRazorPages();
+
+    endpoints.MapControllers();
+});
+
+app.ConfigureLocalization();
+app.ConfigureAndCheckMigration();
+app.ConfigureDefaultAdminUser();
 app.Run();
-
-// \ {} []
